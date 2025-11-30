@@ -1,10 +1,8 @@
-# 🔧 STM32 Sensor Hub (WIP)
+# 🔧 STM32 Sensor Hub
 
 I'm building a small sensor hub on an STM32 to practice real embedded firmware.  
 Basically: read a couple sensors, push data through a buffer, and shoot it out over UART so I can plot/debug it.  
-Nothing insanely fancy — just solid microcontroller fundamentals.
-
-This is a “learn-by-building” project while I’m finishing my senior year, so I’ll update it as I go.
+Practicing microcontroller fundamentals.
 
 ---
 
