@@ -4,8 +4,13 @@
 #include <stdint.h>
 #include <stddef.h>
 
-void uart_cli_init(void);         // init UART + any buffers
-void uart_cli_process(void);      // call periodically to handle RX commands
-void uart_cli_write(const char *s); // helper to send strings
 
-#endif // UART_CLI_H
+void uart_cli_init(void);
+
+void uart_cli_process(void);
+
+void uart_cli_write(const char *s);
+
+void uart_cli_writeline(const char *s);
+
+#endif

@@ -53,15 +53,16 @@ static void flush_telemetry(void) {
 }
 
 int main(void) {
-    system_init();
+    HAL_Init();
+    SystemClock_Config();
 
-    sensor_sample_t sample;
+    MX_GPIO_Init();
+    MX_USART2_UART_Init();
+
+    uart_cli_init();
 
     while (1) {
-        uart_cli_process();        // handle incoming commands
-        read_sensors(&sample);     // grab latest sensor data
-        push_sample_to_telemetry(&sample);
-        flush_telemetry();         // push out data when buffer has bytes
-
+        uart_cli_writeline("loop");
+        HAL_Delay(1000);
     }
 }
